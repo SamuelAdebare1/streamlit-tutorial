@@ -155,3 +155,16 @@ else:
         "https://raw.githubusercontent.com/dhaitz/matplotlib-stylesheets/master/pitayasmoothie-dark.mplstyle")
     plt.barh(bar_x*10, bar_x)
     st.write(fig)
+
+# ==========Call-backs=======
+
+
+def printer(name):
+    print(name)
+
+
+input = st.text_input("Enter your name:")
+s_btn = st.button("SUBMIT")
+if s_btn:
+    st.checkbox("Want to display your me name?",
+                on_change=printer, args=(input,))
